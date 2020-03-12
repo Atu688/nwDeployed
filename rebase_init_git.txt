@@ -1,0 +1,6 @@
+git checkout --orphan latest_branch
+git add -A
+git commit -am "针对程序退出时的异常(表现为在部分机器上退出后再次启动程序失败，可能需要等待较长时间后才能正常启动)做处理（此问题在修复原版GD不能正确的保存/还原主窗口大小位置等状态的过程中引入）"
+git branch -D master
+git branch -m master
+git push -f origin master
