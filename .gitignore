@@ -7,3 +7,4 @@ bin*/*.lib
 *.ilk
 *.pdb
 *.7z
+*.exp
