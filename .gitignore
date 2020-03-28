@@ -8,3 +8,4 @@ bin*/*.lib
 *.pdb
 *.7z
 *.exp
+*.pro.user
