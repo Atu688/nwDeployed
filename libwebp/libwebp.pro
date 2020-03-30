@@ -2,9 +2,10 @@ CONFIG -= qt
 
 TEMPLATE = lib
 
-TARGET = webp
+TARGET = libwebp
 
-CONFIG += static
+CONFIG += shared
+DEFINES += WEBP_EXTERN=__declspec\(dllexport\)
 
 DEFINES += WEBP_USE_THREAD
 DEFINES += __SSE__ __SSE2__ __AVX__ __AVX2__ __FMA__ __SSE4_1__

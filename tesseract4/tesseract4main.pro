@@ -32,4 +32,4 @@ INCLUDEPATH += \
 
 INCLUDEPATH += $${PWD}/../libleptonica/src \
 
-LIBS += -ltesseract4 -llept
+LIBS += -ltesseract4 -lliblept

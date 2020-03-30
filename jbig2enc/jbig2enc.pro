@@ -7,7 +7,7 @@ TARGET = jbig2enc
 CONFIG += console
 
 DEFINES += VERSION=\\\"0\.28\\\"
-win32::msvc*:QMAKE_CFLAGS += /TP # This is important
+win32::msvc*:QMAKE_CFLAGS += /TP # Compile C as CPlusPlus, this is important.
 
 include($${PWD}/../nwDeployed.pri)
 
@@ -29,5 +29,5 @@ SOURCES += \
 
 INCLUDEPATH += $${PWD}/../libleptonica/src .
 
-LIBS += -llept
+LIBS += -lliblept
 

@@ -2,7 +2,7 @@ CONFIG -= qt
 
 TEMPLATE = lib
 
-TARGET = lept
+TARGET = liblept
 
 CONFIG += shared
 
@@ -12,7 +12,7 @@ DEFINES += LIBLEPT_EXPORTS HAVE_CONFIG_H NO_CONSOLE_IO
 DEFINES += OPJ_STATIC
 DEFINES -= UNICODE _UNICODE
 
-win32::msvc*:QMAKE_CFLAGS += /TP # This is important
+win32::msvc*:QMAKE_CFLAGS += /TP # Compile C as CPlusPlus, this is important.
 
 include($${PWD}/../nwDeployed.pri)
 
@@ -244,6 +244,6 @@ INCLUDEPATH += . $${PWD}/src \
     $${PWD}/../libtiff
 
 LIBS += -lGdi32 -lUser32 \
-    -lgiflib -lzlib -lpng -ljpeg \
-    -ltiff -lwebp -lopenjpeg
+    -lgiflib -lzlib -llibpng -llibjpeg \
+    -llibtiff -llibwebp -lopenjpeg
 

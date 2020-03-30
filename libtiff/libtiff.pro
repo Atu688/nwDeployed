@@ -2,11 +2,12 @@ CONFIG -= qt
 
 TEMPLATE = lib
 
-TARGET = tiff
+TARGET = libtiff
 
-CONFIG += static
+CONFIG += shared
 
 DEFINES += TIF_PLATFORM_CONSOLE
+win32:DEF_FILE = libtiff.def
 
 include($${PWD}/../nwDeployed.pri)
 
@@ -73,4 +74,4 @@ SOURCES += \
 
 INCLUDEPATH += $${PWD}/../libjpeg $${PWD}/../libwebp/src
 
-LIBS += -lzlib
+LIBS += -lzlib -llibjpeg -llibwebp
