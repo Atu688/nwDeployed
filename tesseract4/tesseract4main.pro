@@ -1,4 +1,4 @@
-QT -= gui
+CONFIG -= qt
 
 TEMPLATE = app
 
@@ -32,4 +32,4 @@ INCLUDEPATH += \
 
 INCLUDEPATH += $${PWD}/../libleptonica/src \
 
-LIBS += -ltesseract4 -lliblept
+LIBS += -ltesseract4 -llept

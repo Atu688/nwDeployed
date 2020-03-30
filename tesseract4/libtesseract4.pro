@@ -1,4 +1,4 @@
-QT -= gui
+CONFIG -= qt
 
 TEMPLATE = lib
 
@@ -340,4 +340,4 @@ RC_FILE += src/vs2010/tesseract/libtesseract.rc
 
 INCLUDEPATH += $${PWD}/../libleptonica/src \
 
-LIBS += -lws2_32 -lliblept
+LIBS += -lws2_32 -llept
