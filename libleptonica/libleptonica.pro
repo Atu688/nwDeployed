@@ -244,6 +244,14 @@ INCLUDEPATH += . $${PWD}/src \
     $${PWD}/../libtiff
 
 LIBS += -lGdi32 -lUser32 \
-    -lgiflib -lzlib -llibpng -llibjpeg \
+    -lgiflib -llibpng -llibjpeg \
     -llibtiff -llibwebp -lopenjpeg
 
+
+INCLUDEPATH += ../zlib/include
+
+win32:msvc* {
+    LIBS += -lzlib
+} else {
+    LIBS += -lz
+}

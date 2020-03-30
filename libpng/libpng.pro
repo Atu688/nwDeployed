@@ -38,6 +38,10 @@ SOURCES += \
      pngwutil.c \
 
 
-INCLUDEPATH += ../inc
+INCLUDEPATH += ../zlib/include
 
-LIBS += -lzlib
+win32:msvc* {
+   LIBS += -lzlib
+} else {
+   LIBS += -lz
+}

@@ -42,10 +42,10 @@ SOURCES += \
     src/api/wordstrboxrenderer.cpp
 
 
-CONFIG +=  AVX_OPT
-CONFIG +=  AVX2_OPT
-CONFIG +=  FMA_OPT
-CONFIG +=  SSE41_OPT
+win32:msvc*:CONFIG +=  AVX_OPT
+win32:msvc*:CONFIG +=  AVX2_OPT
+win32:msvc*:CONFIG +=  FMA_OPT
+win32:msvc*:CONFIG +=  SSE41_OPT
 
 contains(CONFIG,AVX_OPT) {
 # APPEND arch_files_opt
@@ -334,7 +334,6 @@ INCLUDEPATH += \
 
 win32:msvc* {
 HEADERS += src/vs2010/tesseract/resource.h
-#  tesseract_src
 RC_FILE += src/vs2010/tesseract/libtesseract.rc
 }
 

@@ -72,6 +72,12 @@ SOURCES += \
      tif_zstd.c
 
 
-INCLUDEPATH += $${PWD}/../libjpeg $${PWD}/../libwebp/src
+INCLUDEPATH += $${PWD}/../libjpeg $${PWD}/../libwebp/src $${PWD}/../zlib/include
 
-LIBS += -lzlib -llibjpeg -llibwebp
+LIBS += -llibjpeg -llibwebp
+
+win32:msvc* {
+   LIBS += -lzlib
+} else {
+   LIBS += -lz
+}

@@ -26,6 +26,10 @@ SOURCES += \
      quantize.c
 
 
-INCLUDEPATH +=
+INCLUDEPATH += ../zlib/include
 
-LIBS += -lzlib
+win32:msvc* {
+    LIBS += -lzlib
+} else {
+    LIBS += -lz
+}
