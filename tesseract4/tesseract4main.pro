@@ -7,7 +7,7 @@ TARGET = tesseract4
 CONFIG += console
 
 DEFINES += TESS_IMPORTS _WIN32
-DEFINES += __AVX__ __AVX2__ __FMA__ __SSE4_1__
+win32:msvc*:DEFINES += __AVX__ __AVX2__ __FMA__ __SSE4_1__
 
 include($${PWD}/../nwDeployed.pri)
 

@@ -9,3 +9,9 @@ bin*/*.lib
 *.7z
 *.exp
 *.pro.user
+debug.log
+/tesseract4/src
+/zlib/src
+/tessdata
+/libleptonica/src/*.c
+/tessdata_best_is really not best/
