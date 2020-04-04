@@ -28,8 +28,8 @@ SOURCES += \
 
 INCLUDEPATH += ../zlib/include
 
-win32:msvc* {
-    LIBS += -lzlib
-} else {
+#win32:msvc* {
+#    LIBS += -lzlib
+#} else {
     LIBS += -lz
-}
+#}

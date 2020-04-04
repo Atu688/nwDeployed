@@ -2,6 +2,8 @@ TEMPLATE = subdirs
 CONFIG += ordered
 
 SUBDIRS = \
+    zlib \
+    libbzip2 \
     libgiflib \
     libpng \
     openjpeg \

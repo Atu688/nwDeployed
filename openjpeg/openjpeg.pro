@@ -76,4 +76,3 @@ SOURCES += \
 
 INCLUDEPATH +=
 
-LIBS += -lzlib
