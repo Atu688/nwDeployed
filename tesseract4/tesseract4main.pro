@@ -6,7 +6,7 @@ TARGET = tesseract4
 
 CONFIG += console
 
-DEFINES += TESS_IMPORTS _WIN32
+win32:DEFINES += TESS_IMPORTS _WIN32
 win32:msvc*:DEFINES += __AVX__ __AVX2__ __FMA__ __SSE4_1__
 
 include($${PWD}/../nwDeployed.pri)
@@ -32,4 +32,5 @@ INCLUDEPATH += \
 
 INCLUDEPATH += $${PWD}/../libleptonica/src \
 
-LIBS += -ltesseract4 -lliblept
+LIBS += -ltesseract4 -llept 
+mac:LIBS += -lpng -ljpeg -ltiff -lgiflib -lwebp -lopenjpeg -lz

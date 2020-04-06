@@ -2,9 +2,9 @@ CONFIG -= qt
 
 TEMPLATE = lib
 
-TARGET = libpng
+TARGET = png
 
-CONFIG += shared
+mac:CONFIG += static
 win32:DEF_FILE = symbols.def
 
 include($${PWD}/../nwDeployed.pri)

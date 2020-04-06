@@ -1,9 +1,17 @@
 TEMPLATE = subdirs
 CONFIG += ordered
 
-SUBDIRS = \
+win32:SUBDIRS = \
     zlib \
-    libbzip2 \
+    libbzip2
+
+SUBDIRS = \
+    liblzo \
+    OpenCC \
+    ogg \
+    vorbis \
+    libhunspell \
+    libebu \
     libgiflib \
     libpng \
     openjpeg \
@@ -11,5 +19,5 @@ SUBDIRS = \
     libwebp \
     libtiff \
     libleptonica \
-    jbig2enc \
+#    jbig2enc \
     tesseract4

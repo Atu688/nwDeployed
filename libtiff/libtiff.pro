@@ -2,9 +2,9 @@ CONFIG -= qt
 
 TEMPLATE = lib
 
-TARGET = libtiff
+TARGET = tiff
 
-CONFIG += shared
+mac:CONFIG += static
 
 DEFINES += TIF_PLATFORM_CONSOLE
 win32:DEF_FILE = libtiff.def
@@ -66,10 +66,12 @@ SOURCES += \
      tif_version.c \
      tif_warning.c \
      tif_webp.c \
-     tif_win32.c \
      tif_write.c \
      tif_zip.c \
      tif_zstd.c
+
+win32:SOURCES += tif_win32.c
+unix:SOURCES +=  tif_unix.c
 
 
 INCLUDEPATH += $${PWD}/../libjpeg $${PWD}/../libwebp/src $${PWD}/../zlib/include

@@ -2,10 +2,10 @@ CONFIG -= qt
 
 TEMPLATE = lib
 
-TARGET = libjpeg
+TARGET = jpeg
 DESTDIR_TARGET
 
-CONFIG += shared
+mac:CONFIG += static
 win32:DEF_FILE = jpeg8.def
 
 include($${PWD}/../nwDeployed.pri)

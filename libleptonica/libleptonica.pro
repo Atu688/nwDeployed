@@ -2,9 +2,9 @@ CONFIG -= qt
 
 TEMPLATE = lib
 
-TARGET = liblept
+TARGET = lept
 
-CONFIG += shared
+mac:CONFIG += static
 
 
 win32::msvc*:DEFINES += COMPILER_MSVC
@@ -243,15 +243,10 @@ INCLUDEPATH += . $${PWD}/src \
     $${PWD}/../libgiflib \
     $${PWD}/../libtiff
 
-LIBS += -lGdi32 -lUser32 \
-    -lgiflib -llibpng -llibjpeg \
-    -llibtiff -llibwebp -lopenjpeg
+win32:LIBS += -lGdi32 -lUser32
+
+LIBS += -lgiflib -llibpng -llibjpeg \
+    -llibtiff -llibwebp -lopenjpeg -lz
 
 
 INCLUDEPATH += ../zlib/include
-
-#win32:msvc* {
-#    LIBS += -lzlib
-#} else {
-    LIBS += -lz
-#}
