@@ -5,7 +5,7 @@ win32:SUBDIRS = \
     zlib \
     libbzip2
 
-SUBDIRS = \
+SUBDIRS += \
     liblzo \
     OpenCC \
     ogg \
