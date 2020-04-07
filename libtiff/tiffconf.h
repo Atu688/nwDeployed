@@ -151,7 +151,7 @@
 #define CHECK_JPEG_YCBCR_SUBSAMPLING 1
 
 /* Support MS MDI magic number files as TIFF */
-/* #undef MDI_SUPPORT */
+#define MDI_SUPPORT 1
 
 /*
  * Feature support definitions.

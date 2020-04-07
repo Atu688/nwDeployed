@@ -76,10 +76,4 @@ unix:SOURCES +=  tif_unix.c
 
 INCLUDEPATH += $${PWD}/../libjpeg $${PWD}/../libwebp/src $${PWD}/../zlib/include
 
-LIBS += -llibjpeg -llibwebp
-
-#win32:msvc* {
-#   LIBS += -lzlib
-#} else {
-   LIBS += -lz
-#}
+LIBS += -ljpeg -lwebp -lz

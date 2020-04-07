@@ -30,5 +30,6 @@ contains(TEMPLATE,lib) {
 } else {
     DESTDIR = $${NWDEP_BIN}
 }
+
 LIBS += -L$${NWDEP_LIB}
 
